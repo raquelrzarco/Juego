@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raquel.juego.fragments.DescripcionFragment"
+    android:paddingRight="50dp"
+    android:paddingLeft="50dp"
+    android:paddingTop="30dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:paddingTop="20dp"
+        android:id="@+id/fotodes"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/boss"/>
+
+    <TextView
+        android:id="@+id/txtDescritptcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Descriptcion"/>
+
+</FrameLayout>

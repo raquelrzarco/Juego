@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Juego</string>
+    <string name="nombre">Introduce tu nombre de usuario</string>
+    <string name="contraseña">Introduce la contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="Descriptcion">Este es un juego de naves con una estetica nueva. Nuestros modelos son naves marinas que se encuentran en una mesa japonesa en vista cenital. Nuestro objetivo es eliminiar a el pulpo para ello nuestra nave podrá disparar ojos de colores. Pero cuidado, ellos intentaran acabar contigo antes de lo que esperas.</string>
+    <string name="bienvenida">Hola usuario, gracias por usar la aplicación estos son los datos que debes proporcionarnos antes de empezar</string>
+    <string name="email">Introduce tu correo electronico</string>
+    <string name="tips">Tips</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="salir">Salir</string>
+    <string name="personajes">Personajes</string>
+    <string name="ajustes">Ajustes</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
