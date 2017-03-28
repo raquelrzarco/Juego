@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         navView = (NavigationView) findViewById(R.id.navView);
 
-
+        navView.setNavigationItemSelectedListener(this);
     }
 
     @Override
