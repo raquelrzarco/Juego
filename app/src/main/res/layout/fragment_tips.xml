@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raquel.juego.fragments.TipsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/descripciontips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tipdescripcion"
+        android:padding="15dp"/>
+    <RadioButton
+        android:layout_marginTop="120dp"
+        android:id="@+id/tip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tip1"
+        android:padding="15dp"/>
+    <RadioButton
+        android:layout_marginTop="200dp"
+        android:id="@+id/tip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tip2"
+        android:padding="15dp"/>
+    <RadioButton
+        android:layout_marginTop="280dp"
+        android:id="@+id/tip3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tip3"
+        android:padding="15dp"/>
+
+
+</FrameLayout>
