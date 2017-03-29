@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         setSupportActionBar(toolbar);
+        //No funciona preguntar por qué
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         navView.setNavigationItemSelectedListener(this);

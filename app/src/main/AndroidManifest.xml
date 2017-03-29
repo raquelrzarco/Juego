@@ -16,7 +16,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".activity.FormularioRegistroActivity"></activity>
+        <activity android:name=".activity.FormularioRegistroActivity" />
+        <activity android:name=".activity.PersonajesActivity" />
+        <activity android:name=".activity.ObjetosActivity" />
+        <activity android:name=".activity.TipsActivity" />
+        <activity android:name=".activity.DescripcionActivity" />
+        <activity android:name=".activity.AjustesActivity" />
+        <activity android:name=".activity.SalirActivity"></activity>
     </application>
 
 </manifest>
