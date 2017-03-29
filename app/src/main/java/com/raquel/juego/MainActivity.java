@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         navView.setNavigationItemSelectedListener(this);
-        
+
         fm = getSupportFragmentManager();
         fm.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
