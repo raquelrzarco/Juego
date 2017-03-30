@@ -29,4 +29,5 @@
     <string name="contacto">Envianos tu consulta con un correo a :raquel_zarco_apps1m1617@cev</string>
     <string name="infdes">Para el desarrollo de este juego nos hemos basado en el motor grafico de Unity porgrado en C# que se encuentra para la plataforma de pc. Decidimos este desarrollo para poder tener más accesibilidad al publico</string>
     <string name="seguroSalir">¿Estas seguro de que quieres salir de la aplicacion?</string>
+    <string name="objetos">Objetos</string>
 </resources>

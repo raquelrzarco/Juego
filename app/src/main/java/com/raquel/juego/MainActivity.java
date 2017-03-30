@@ -39,14 +39,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fm = getSupportFragmentManager();
         fm.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
-
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
             case android.R.id.home:
                 drawer.openDrawer(GravityCompat.START);
                 break;
         }
+        return true;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item_descripcion:
+                //Solo fragment
+                //fm.beginTransaction().replace(R.id.container,fragment_descripcion).commit();
+                break;
+            case R.id.item_personajes:
+                //con lista
+            case R.id.item_objetos:
+                //con lista
+            case R.id.item_tips:
+                //Solo fragment
+            case R.id.item_ajustes:
+                //Solo fragment
+            case R.id.item_salir:
+                //Solo fragment
+        }
+        item.setChecked(true);
+        getSupportActionBar().setTitle(item.getTitle());
+        drawer.closeDrawers();
+
         return true;
     }
 }
