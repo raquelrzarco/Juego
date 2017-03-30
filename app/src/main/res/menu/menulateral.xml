@@ -5,6 +5,8 @@
 
     <group android:checkableBehavior="single"
         android:layout_width="wrap_content">
+        <item android:id="@+id/item_perfil"
+            android:title="@string/perfil"/>
     <item android:id="@+id/item_descripcion"
         android:title="@string/descripcion"/>
     <item android:id="@+id/item_personajes"

@@ -30,4 +30,5 @@
     <string name="infdes">Para el desarrollo de este juego nos hemos basado en el motor grafico de Unity porgrado en C# que se encuentra para la plataforma de pc. Decidimos este desarrollo para poder tener más accesibilidad al publico</string>
     <string name="seguroSalir">¿Estas seguro de que quieres salir de la aplicacion?</string>
     <string name="objetos">Objetos</string>
+    <string name="perfil">Perfil</string>
 </resources>

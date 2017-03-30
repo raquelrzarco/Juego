@@ -10,7 +10,7 @@ public class PersonajeBean implements Serializable {
     private int foto;
     private String descripcion;
 
-    public PersonajeBean(String descripcion, int foto, double precio) {
+    public PersonajeBean(String descripcion, int foto) {
         this.descripcion = descripcion;
         this.foto = foto;
     }
