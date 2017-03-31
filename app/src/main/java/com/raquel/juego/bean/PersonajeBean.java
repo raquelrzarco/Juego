@@ -7,23 +7,21 @@ import java.io.Serializable;
  */
 
 public class PersonajeBean implements Serializable {
-    private int foto;
-    private String descripcion;
+    private static int foto;
+    private static String descripcion;
 
     public PersonajeBean(String descripcion, int foto) {
         this.descripcion = descripcion;
         this.foto = foto;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+    public static String getDescripcion() {return descripcion;}
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public int getFoto() {
+    public static int getFoto() {
         return foto;
     }
 

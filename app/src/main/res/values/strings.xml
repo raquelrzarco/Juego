@@ -31,4 +31,8 @@
     <string name="seguroSalir">¿Estas seguro de que quieres salir de la aplicacion?</string>
     <string name="objetos">Objetos</string>
     <string name="perfil">Perfil</string>
+    <string name="objtospuntos">Puntos</string>
+    <string name="pez">Protagonista</string>
+    <string name="pulpo">Boss</string>
+    <string name="raya">Raya</string>
 </resources>

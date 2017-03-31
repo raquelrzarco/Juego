@@ -16,6 +16,9 @@ import com.raquel.juego.bean.UsuarioBean;
 
 public class PerfilFragment extends Fragment {
 
+    public static PerfilFragment newInstance(){
+        return new PerfilFragment();
+    }
 
 
     public PerfilFragment() {
@@ -29,7 +32,6 @@ public class PerfilFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_perfil, container, false);
         Preferncias preferencias = new Preferncias(getActivity());
-
         UsuarioBean usuarioBean = preferencias.getUsuario();
         return view;
     }

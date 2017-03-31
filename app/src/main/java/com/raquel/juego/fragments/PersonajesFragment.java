@@ -41,11 +41,22 @@ public class PersonajesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_personajes,null);
         listpersonajes = (ListView) view.findViewById(R.id.listpersonajes);
         personajes = ModeloPersonajes.getPersonaje();
+
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, personajes);
         listpersonajes.setAdapter(adapter);
 
         return view;
     }
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
+
 
 
 }

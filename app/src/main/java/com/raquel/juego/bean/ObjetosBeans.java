@@ -7,15 +7,15 @@ import java.io.Serializable;
  */
 
 public class ObjetosBeans implements Serializable{
-    private int foto;
-    private String descripcion;
+    private static int foto;
+    private static String descripcion;
 
     public ObjetosBeans(String descripcion, int foto) {
         this.descripcion = descripcion;
         this.foto = foto;
     }
 
-    public String getDescripcion() {
+    public static String getDescripcion() {
         return descripcion;
     }
 
@@ -23,7 +23,7 @@ public class ObjetosBeans implements Serializable{
         this.descripcion = descripcion;
     }
 
-    public int getFoto() {
+    public static int getFoto() {
         return foto;
     }
 

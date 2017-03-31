@@ -20,6 +20,9 @@ public class DescripcionFragment extends Fragment {
     public DescripcionFragment() {
         // Required empty public constructor
     }
+    public static DescripcionFragment newInstance(){
+        return new DescripcionFragment();
+    }
 
 
     @Override

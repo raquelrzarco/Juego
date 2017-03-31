@@ -3,21 +3,29 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-    <group android:checkableBehavior="single"
-        android:layout_width="wrap_content">
-        <item android:id="@+id/item_perfil"
-            android:title="@string/perfil"/>
-    <item android:id="@+id/item_descripcion"
-        android:title="@string/descripcion"/>
-    <item android:id="@+id/item_personajes"
-        android:title="@string/personajes"/>
-        <item android:id="@+id/item_objetos"
-            android:title="@string/objetos"/>
-    <item android:id="@+id/item_tips"
-        android:title="@string/tips"/>
-    <item android:id="@+id/item_ajustes"
-        android:title="@string/ajustes"/>
-    <item android:id="@+id/item_salir"
-        android:title="@string/salir"/>
+    <group
+        android:layout_width="wrap_content"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_perfil"
+            android:title="@string/perfil" />
+        <item
+            android:id="@+id/item_descripcion"
+            android:title="@string/descripcion" />
+        <item
+            android:id="@+id/item_personajes"
+            android:title="@string/personajes" />
+        <item
+            android:id="@+id/item_objetos"
+            android:title="@string/objetos" />
+        <item
+            android:id="@+id/item_tips"
+            android:title="@string/tips" />
+        <item
+            android:id="@+id/item_ajustes"
+            android:title="@string/ajustes" />
+        <item
+            android:id="@+id/item_salir"
+            android:title="@string/salir" />
     </group>
 </menu>

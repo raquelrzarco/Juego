@@ -5,35 +5,10 @@
     tools:context="com.raquel.juego.fragments.ObjetosFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_marginLeft="130dp"
-        android:id="@+id/puntosimagen"
-        android:layout_marginTop="10dp"
-        android:layout_width="111dp"
-        android:layout_height="123dp"
-        android:src="@drawable/puntuacion"/>
-
-    <TextView
-        android:layout_marginTop="135dp"
-        android:id="@+id/txtPuntuacion"
+    <ListView
+        android:id="@+id/listobjetos"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/puntuacion"
-        android:padding="10dp"/>
+        android:layout_height="wrap_content"></ListView>
 
-    <ImageView
-        android:layout_marginLeft="130dp"
-        android:id="@+id/vidaimagen"
-        android:layout_marginTop="190dp"
-        android:layout_width="111dp"
-        android:layout_height="123dp"
-        android:src="@drawable/vida"/>
-
-    <TextView
-        android:layout_marginTop="320dp"
-        android:id="@+id/txtVida"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/vida"
-        android:padding="10dp"/>
 </FrameLayout>
