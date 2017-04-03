@@ -13,27 +13,27 @@
 
     <TextView
         android:layout_marginTop="15dp"
-        android:id="@+id/descripciontips"
+        android:id="@+id/presentaciontip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tipdescripcion"
         android:padding="15dp"/>
     <TextView
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/tip1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tip1"
         android:padding="15dp"/>
     <TextView
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/tip2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tip2"
         android:padding="15dp"/>
     <TextView
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="28dp"
         android:id="@+id/tip3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +41,7 @@
         android:padding="15dp"/>
 
     <Button
+        android:layout_marginTop="30dp"
         android:id="@+id/btnCompartir"
         android:text="@string/compartir"
         android:layout_width="wrap_content"

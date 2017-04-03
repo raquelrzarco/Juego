@@ -32,5 +32,6 @@
     <string name="explicacionperfil">hola usuario estos son los datos de tu cuenta</string>
     <string name="tipnuero">tip:1</string>
     <string name="compartir">Compartir</string>
+    <string name="novedades">Nuevo Tip</string>
 
 </resources>

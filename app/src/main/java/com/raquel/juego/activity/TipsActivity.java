@@ -11,7 +11,7 @@ import com.raquel.juego.bean.TipsBean;
 import com.raquel.juego.fragments.TipsFragment;
 
 public class TipsActivity extends AppCompatActivity implements View.OnClickListener{
-    private TextView descripciontips;
+    private TextView presentaciontip;
     private TextView tip1;
     private TextView tip2;
     private TextView tip3;
@@ -21,7 +21,7 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips);
-        descripciontips = (TextView) findViewById(R.id.descripciontips);
+        presentaciontip = (TextView) findViewById(R.id.presentaciontip);
         tip1 = (TextView) findViewById(R.id.tip1);
         tip2 = (TextView) findViewById(R.id.tip2);
         tip3 = (TextView) findViewById(R.id.tip3);
@@ -30,7 +30,7 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = getIntent();
         TipsBean tipsBean = (TipsBean) intent.getSerializableExtra(TipsFragment.TIPS_KEY);
 
-        descripciontips.setText(tipsBean.getPresentaciontip());
+        presentaciontip.setText(tipsBean.getPresentaciontip());
         tip1.setText(tipsBean.getTip1());
         tip2.setText(tipsBean.getTip2());
         tip3.setText(tipsBean.getTip3());
@@ -43,7 +43,7 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
 
-        intent.putExtra(Intent.EXTRA_TEXT, descripciontips.getText());
+        intent.putExtra(Intent.EXTRA_TEXT, presentaciontip.getText());
         startActivity(intent);
     }
 }

@@ -38,7 +38,6 @@ public class TipsFragment extends Fragment implements AdapterView.OnItemClickLis
 
     public static TipsFragment newInstance() {
         TipsFragment fragment = new TipsFragment();
-
         return fragment;
     }
 
@@ -46,14 +45,14 @@ public class TipsFragment extends Fragment implements AdapterView.OnItemClickLis
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_personajes,null);
+        View view = inflater.inflate(R.layout.fragment_tips,null);
         listtips = (ListView) view.findViewById(R.id.listtips);
         tips = Modelotips.getTip();
 
         TipsAdapter adaptertips = new TipsAdapter(getActivity(), R.layout.item_tips, tips);
         listtips.setAdapter(adaptertips);
-        listtips.setOnItemClickListener(this);
 
+        listtips.setOnItemClickListener(this);
         return view;
     }
 
@@ -65,5 +64,4 @@ public class TipsFragment extends Fragment implements AdapterView.OnItemClickLis
 
         startActivity(intent);
     }
-
 }

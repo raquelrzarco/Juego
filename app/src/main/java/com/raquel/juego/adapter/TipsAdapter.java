@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import com.raquel.juego.R;
 import com.raquel.juego.bean.TipsBean;
@@ -29,10 +28,9 @@ public class TipsAdapter extends ArrayAdapter<TipsBean> {
         this.objects=objects;
     }
     class ViewHolder{
-        TextView descripciontips;
-        TextView tip1;
-        TextView tip2;
-        TextView tip3;
+        TextView tips;
+        TextView numerotip;
+
 
     }
 
@@ -47,19 +45,17 @@ public class TipsAdapter extends ArrayAdapter<TipsBean> {
         if (convertView1 ==null){
             viewHolder = new ViewHolder();
             convertView1= LayoutInflater.from(context).inflate(resource,null);
-            viewHolder.descripciontips = (TextView) convertView1.findViewById(R.id.descripciontips);
-            viewHolder.tip1 = (TextView) convertView1.findViewById(R.id.tip1);
-            viewHolder.tip2 = (TextView) convertView1.findViewById(R.id.tip2);
-            viewHolder.tip3 = (TextView) convertView1.findViewById(R.id.tip3);
+            viewHolder.tips = (TextView) convertView1.findViewById(R.id.tips);
+            viewHolder.numerotip = (TextView) convertView1.findViewById(R.id.numerotip);
+
             convertView1.setTag(viewHolder);
         }else{
             viewHolder= (ViewHolder) convertView1.getTag();
         }
         TipsBean tipsBean = objects.get(position);
-        viewHolder.descripciontips.setText(tipsBean.getPresentaciontip());
-        viewHolder.tip1.setText(String.valueOf(tipsBean.getTip1()));
-        viewHolder.tip2.setText(String.valueOf(tipsBean.getTip2()));
-        viewHolder.tip3.setText(String.valueOf(tipsBean.getTip3()));
+        viewHolder.tips.setText(tipsBean.getPresentaciontip());
+        viewHolder.numerotip.setText(tipsBean.getTip1());
+  
 
         return convertView1;
     }

@@ -1,8 +1,4 @@
 package com.raquel.juego.bean;
-
-import android.widget.RadioButton;
-import android.widget.TextView;
-
 import java.io.Serializable;
 
 /**
