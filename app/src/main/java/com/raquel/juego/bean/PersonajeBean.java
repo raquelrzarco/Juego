@@ -7,25 +7,30 @@ import java.io.Serializable;
  */
 
 public class PersonajeBean implements Serializable {
-    private static int foto;
-    private static String descripcion;
+    private  int foto;
+    private  String descripcion;
 
     public PersonajeBean(String descripcion, int foto) {
         this.descripcion = descripcion;
         this.foto = foto;
     }
 
-    public static String getDescripcion() {return descripcion;}
+    public  String getDescripcion() {return descripcion;}
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public static int getFoto() {
+    public int getFoto() {
         return foto;
     }
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    @Override
+    public String toString() {
+        return  descripcion;
     }
 }

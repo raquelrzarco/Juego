@@ -1,12 +1,14 @@
 package com.raquel.juego.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -18,10 +20,11 @@ import com.raquel.juego.bean.PersonajeBean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonajesFragment extends Fragment {
+public class PersonajesFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private ListView listpersonajes;
     ArrayList<PersonajeBean> personajes = new ArrayList<>();
+    public static final String PERSONAJE_KEY="PERSONAJE_KEY";
 
 
     public static PersonajesFragment newInstance(){
@@ -58,5 +61,12 @@ public class PersonajesFragment extends Fragment {
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long l) {
+        PersonajeBean personajeBean = personajes.get(posicion);
+        Intent intent = new Intent(getActivity(), PersonajesActivity.class);
+        intent.putExtra(PERSONAJE_KEY, personajeBean);
 
+        startActivity(intent);
+    }
 }

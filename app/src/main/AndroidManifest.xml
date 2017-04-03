@@ -22,9 +22,6 @@
         <activity android:name=".activity.TipsActivity" />
         <activity android:name=".activity.DescripcionActivity" />
         <activity android:name=".activity.AjustesActivity" />
-        <activity android:name=".activity.BossActivity" />
-        <activity android:name=".activity.EnemigoActivity" />
-        <activity android:name=".activity.ProtagonistaActivity"></activity>
     </application>
 
 </manifest>

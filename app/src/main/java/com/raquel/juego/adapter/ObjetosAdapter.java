@@ -54,7 +54,6 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBeans> {
         }
 
         ObjetosBeans objetosBeans = objectos.get(position);
-
         viewHolder.descripcion.setText(objetosBeans.getDescripcion());
         return view;
     }

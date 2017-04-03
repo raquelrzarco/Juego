@@ -18,7 +18,7 @@ public class ModeloPersonajes {
 
         personaje.add(new PersonajeBean("Protagonista", R.drawable.protagonista));
         personaje.add(new PersonajeBean("Enemigo", R.drawable.enemigo));
-
+        personaje.add(new PersonajeBean("Boss", R.drawable.boss));
         return personaje;
 
     }

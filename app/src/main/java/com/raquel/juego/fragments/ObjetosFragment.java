@@ -1,27 +1,28 @@
 package com.raquel.juego.fragments;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
-
-import com.raquel.juego.Modelos.ModeloPersonajes;
+import com.raquel.juego.Modelos.ModeloObjetos;
 import com.raquel.juego.R;
 import com.raquel.juego.activity.ObjetosActivity;
+import com.raquel.juego.activity.PersonajesActivity;
 import com.raquel.juego.adapter.ObjetosAdapter;
-import com.raquel.juego.bean.PersonajeBean;
+import com.raquel.juego.bean.ObjetosBeans;
 
 import java.util.ArrayList;
 
-public class ObjetosFragment extends Fragment {
+public class ObjetosFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private ListView listobjetos;
-    ArrayList<PersonajeBean> objetos = new ArrayList<>();
+    ArrayList<ObjetosBeans> objetos = new ArrayList<>();
+    public static final String OBJETOS_KEY="OBJETOS_KEY";
 
     public static ObjetosFragment newInstance(){
        return new ObjetosFragment();
@@ -31,29 +32,26 @@ public class ObjetosFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_objetos,null);
         listobjetos = (ListView) view.findViewById(R.id.listobjetos);
-        objetos = ModeloPersonajes.getPersonaje();
+        objetos = ModeloObjetos.getObjeto();
 
-        //ObjetosAdapter objetosAdapter = new ObjetosAdapter(getActivity(), android.R.layout.item_objetos, objetos);
-       // listobjetos.setAdapter(objetosAdapter);
-
+        ObjetosAdapter objetosAdapter = new ObjetosAdapter(getActivity(), R.layout.item_objetos, objetos);
+        listobjetos.setAdapter(objetosAdapter);
+        listobjetos.setOnItemClickListener(this);
         return view;
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        ObjetosBeans objetosBeans = objetos.get(i);
+        Intent intent = new Intent(getActivity(), ObjetosActivity.class);
+        intent.putExtra(OBJETOS_KEY, objetosBeans);
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
+        startActivity(intent);
     }
-
 }

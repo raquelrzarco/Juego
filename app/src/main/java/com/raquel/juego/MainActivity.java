@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fm.beginTransaction().replace(R.id.container,objetosFragment).commit();
                 break;
             case R.id.item_tips:
+                //Lista
                 TipsFragment tipsFragment = TipsFragment.newInstance();
                 fm.beginTransaction().replace(R.id.container, tipsFragment).commit();
                 break;

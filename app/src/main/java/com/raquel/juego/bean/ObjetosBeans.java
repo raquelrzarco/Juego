@@ -7,15 +7,15 @@ import java.io.Serializable;
  */
 
 public class ObjetosBeans implements Serializable{
-    private static int foto;
-    private static String descripcion;
+    private  int foto;
+    private  String descripcion;
 
     public ObjetosBeans(String descripcion, int foto) {
         this.descripcion = descripcion;
         this.foto = foto;
     }
 
-    public static String getDescripcion() {
+    public  String getDescripcion() {
         return descripcion;
     }
 
@@ -23,11 +23,16 @@ public class ObjetosBeans implements Serializable{
         this.descripcion = descripcion;
     }
 
-    public static int getFoto() {
+    public  int getFoto() {
         return foto;
     }
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    @Override
+    public String toString() {
+        return descripcion + foto;
     }
 }
