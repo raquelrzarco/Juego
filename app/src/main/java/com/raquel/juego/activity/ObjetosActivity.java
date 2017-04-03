@@ -16,6 +16,7 @@ import com.raquel.juego.fragments.ObjetosFragment;
 import com.raquel.juego.fragments.PersonajesFragment;
 
 public class ObjetosActivity extends AppCompatActivity implements View.OnClickListener{
+    private TextView nombreobjeto;
     private ImageView puntosimagen;
     private TextView txtPuntuacion;
     private Button btnCompartir;
@@ -28,13 +29,15 @@ public class ObjetosActivity extends AppCompatActivity implements View.OnClickLi
         puntosimagen = (ImageView) findViewById(R.id.puntosimagen);
         txtPuntuacion = (TextView) findViewById(R.id.txtPuntuacion);
         btnCompartir = (Button) findViewById(R.id.btnCompartir);
+        nombreobjeto = (TextView) findViewById(R.id.nombreobjeto);
 
         //Recoges el intent con la clave Objetos_key
         Intent intent = getIntent();
         ObjetosBeans objetosBeans = (ObjetosBeans) intent.getSerializableExtra(ObjetosFragment.OBJETOS_KEY);
 
         //y Recoges los valores que tiene el objeto
-        txtPuntuacion.setText(objetosBeans.getDescripcion());
+        nombreobjeto.setText(objetosBeans.getDescripcion());
+        txtPuntuacion.setText(objetosBeans.getNombre());
         puntosimagen.setImageDrawable(ContextCompat.getDrawable(this,objetosBeans.getFoto()));
 
 

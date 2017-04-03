@@ -15,7 +15,6 @@
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tipdescripcion">Esta es nuestra seccion de tips donde te ayudaremos a conocer mejor el juego, para ello te facilitaremos la experiencia del mismo con novedades y trucos que serán publicados en este lugar, ademásde poder marcar los tips que has leido</string>
     <string name="tip1">Cuando chocas con un objeto de vida recuperas vida cada vez es decir que si te chocas más de una vez recuperaras dos veces vida</string>
     <string name="tip2">La puntiacion es completamete aleatoria por lo que no te extrañe si no encuentras en un buen rato más puntos</string>
@@ -33,5 +32,5 @@
     <string name="explicacionperfil">hola usuario estos son los datos de tu cuenta</string>
     <string name="tipnuero">tip:1</string>
     <string name="compartir">Compartir</string>
-    <string name="objtos">Objeto</string>
+
 </resources>

@@ -9,10 +9,20 @@ import java.io.Serializable;
 public class ObjetosBeans implements Serializable{
     private  int foto;
     private  String descripcion;
+    private String nombre;
 
-    public ObjetosBeans(String descripcion, int foto) {
+    public ObjetosBeans(String descripcion, int foto, String nombre) {
         this.descripcion = descripcion;
         this.foto = foto;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public  String getDescripcion() {

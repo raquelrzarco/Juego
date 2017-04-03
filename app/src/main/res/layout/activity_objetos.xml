@@ -10,6 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.raquel.juego.activity.ObjetosActivity"
     android:orientation="vertical">
+    <TextView
+    android:layout_marginTop="10dp"
+    android:id="@+id/nombreobjeto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="10dp"/>
+
 
     <ImageView
         android:layout_marginLeft="130dp"
