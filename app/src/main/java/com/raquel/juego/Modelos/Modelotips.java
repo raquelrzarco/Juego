@@ -16,8 +16,9 @@ public class Modelotips {
 
         ArrayList<TipsBean> tipsBeanTipsAdapter = new ArrayList<>();
 
-        //  tipsBeanTipsAdapter.add(new TipsBean("tip1", ));
-        //tipsBeanTipsAdapter.add(new TipsBean("tip2", ));
+        tipsBeanTipsAdapter.add(new TipsBean("tip1","tip1","tip1", "tip1" ));
+        tipsBeanTipsAdapter.add(new TipsBean("tip2","tip2","tip2", "tip2" ));
+        tipsBeanTipsAdapter.add(new TipsBean("tip3","tip3","tip3", "tip3" ));
 
         return tipsBeanTipsAdapter;
     }

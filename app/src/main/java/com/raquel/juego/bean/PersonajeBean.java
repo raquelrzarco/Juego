@@ -9,13 +9,17 @@ import java.io.Serializable;
 public class PersonajeBean implements Serializable {
     private  int foto;
     private  String descripcion;
+    private String histroiapersonaje;
 
-    public PersonajeBean(String descripcion, int foto) {
+    public PersonajeBean(String descripcion, int foto, String histroiapersonaje) {
         this.descripcion = descripcion;
         this.foto = foto;
+        this.histroiapersonaje = histroiapersonaje;
     }
 
-    public  String getDescripcion() {return descripcion;}
+    public String getDescripcion() {
+        return descripcion;
+    }
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
@@ -27,6 +31,14 @@ public class PersonajeBean implements Serializable {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public String getHistroiapersonaje() {
+        return histroiapersonaje;
+    }
+
+    public void setHistroiapersonaje(String histroiapersonaje) {
+        this.histroiapersonaje = histroiapersonaje;
     }
 
     @Override

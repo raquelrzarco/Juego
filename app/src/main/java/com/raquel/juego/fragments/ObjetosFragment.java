@@ -38,9 +38,11 @@ public class ObjetosFragment extends Fragment implements AdapterView.OnItemClick
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_objetos,null);
         listobjetos = (ListView) view.findViewById(R.id.listobjetos);
+        // baso el objeto en el modelo que tenemos hecho
         objetos = ModeloObjetos.getObjeto();
-
+        // usamos el adaptador y el item que le hemos hecho
         ObjetosAdapter objetosAdapter = new ObjetosAdapter(getActivity(), R.layout.item_objetos, objetos);
+        //y le asignamos el adapter
         listobjetos.setAdapter(objetosAdapter);
         listobjetos.setOnItemClickListener(this);
         return view;

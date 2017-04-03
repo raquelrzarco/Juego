@@ -47,6 +47,7 @@ public class PersonajesFragment extends Fragment implements AdapterView.OnItemCl
 
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, personajes);
         listpersonajes.setAdapter(adapter);
+        listpersonajes.setOnItemClickListener(this);
 
         return view;
     }

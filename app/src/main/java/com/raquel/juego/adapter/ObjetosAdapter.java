@@ -39,15 +39,15 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBeans> {
 
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
         ViewHolder viewHolder;
 
         if(view==null){
             viewHolder = new ViewHolder();
             view = LayoutInflater.from(context).inflate(resource,null);
-            viewHolder.descripcion = (TextView) view.findViewById(R.id.descripciontips);
-            viewHolder.foto = (ImageView) view.findViewById(R.drawable.puntuacion);
+            viewHolder.descripcion = (TextView) view.findViewById(R.id.descripcion);
+         // viewHolder.foto = (ImageView) view.findViewById(R.drawable.puntuacion);
             view.setTag(viewHolder);
         }else{
             viewHolder = (ViewHolder) view.getTag();
@@ -55,6 +55,8 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBeans> {
 
         ObjetosBeans objetosBeans = objectos.get(position);
         viewHolder.descripcion.setText(objetosBeans.getDescripcion());
+       // viewHolder.foto.setImageDrawable(String.valueOf(objetosBeans.getFoto());
+
         return view;
     }
 }

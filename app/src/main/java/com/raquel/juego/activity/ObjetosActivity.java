@@ -18,8 +18,6 @@ import com.raquel.juego.fragments.PersonajesFragment;
 public class ObjetosActivity extends AppCompatActivity implements View.OnClickListener{
     private ImageView puntosimagen;
     private TextView txtPuntuacion;
-    private ImageView vidaimagen;
-    private TextView txtVida;
     private Button btnCompartir;
 
 
@@ -29,30 +27,28 @@ public class ObjetosActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_objetos);
         puntosimagen = (ImageView) findViewById(R.id.puntosimagen);
         txtPuntuacion = (TextView) findViewById(R.id.txtPuntuacion);
-        vidaimagen = (ImageView) findViewById(R.id.vidaimagen);
-        txtVida = (TextView) findViewById(R.id.txtVida);
         btnCompartir = (Button) findViewById(R.id.btnCompartir);
 
-
+        //Recoges el intent con la clave Objetos_key
         Intent intent = getIntent();
         ObjetosBeans objetosBeans = (ObjetosBeans) intent.getSerializableExtra(ObjetosFragment.OBJETOS_KEY);
 
+        //y Recoges los valores que tiene el objeto
         txtPuntuacion.setText(objetosBeans.getDescripcion());
         puntosimagen.setImageDrawable(ContextCompat.getDrawable(this,objetosBeans.getFoto()));
 
-        txtVida.setText(objetosBeans.getDescripcion());
-        vidaimagen.setImageDrawable(ContextCompat.getDrawable(this,objetosBeans.getFoto()));
 
         btnCompartir.setOnClickListener(this);
 
     }
 
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text");
 
-        intent.putExtra(Intent.EXTRA_TEXT, String.valueOf(txtPuntuacion));
+    @Override
+    public void onClick(View view) { // boton compartir
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+
+        intent.putExtra(Intent.EXTRA_TEXT, txtPuntuacion.getText());
         startActivity(intent);
     }
 }

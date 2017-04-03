@@ -14,36 +14,23 @@
     <ImageView
         android:layout_marginLeft="130dp"
         android:id="@+id/puntosimagen"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_width="111dp"
         android:layout_height="123dp"
         android:src="@drawable/puntuacion"/>
 
     <TextView
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="105dp"
         android:id="@+id/txtPuntuacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/puntuacion"
         android:padding="10dp"/>
 
-    <ImageView
-        android:layout_marginLeft="130dp"
-        android:id="@+id/vidaimagen"
-        android:layout_marginTop="190dp"
-        android:layout_width="111dp"
-        android:layout_height="123dp"
-        android:src="@drawable/vida"/>
 
-    <TextView
-        android:layout_marginTop="320dp"
-        android:id="@+id/txtVida"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/vida"
-        android:padding="10dp"/>
     <Button
+        android:layout_marginTop="115dp"
         android:id="@+id/btnCompartir"
+        android:text="@string/compartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -16,16 +16,23 @@
         android:id="@+id/txtdescripPersonaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtpersonaje"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <ImageView
         android:layout_marginLeft="40dp"
         android:layout_marginTop="80dp"
         android:id="@+id/imgpersonaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
     <Button
         android:layout_marginLeft="15dp"
         android:layout_marginTop="150dp"
         android:id="@+id/btnCompartir"
+        android:text="@string/compartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

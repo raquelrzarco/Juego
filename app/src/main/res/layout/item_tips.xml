@@ -9,5 +9,11 @@
         android:layout_height="50dp"
         android:text="@string/tips"/>
 
+    <TextView
+        android:id="@+id/numerotip"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp" />
+
 
 </LinearLayout>

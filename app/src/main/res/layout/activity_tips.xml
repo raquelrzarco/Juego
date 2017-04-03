@@ -41,8 +41,8 @@
         android:padding="15dp"/>
 
     <Button
-        android:layout_marginTop="320dp"
         android:id="@+id/btnCompartir"
+        android:text="@string/compartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

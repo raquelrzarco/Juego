@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.item_perfil:
+                //Solo fragment
                 PerfilFragment perfilFragment = PerfilFragment.newInstance();
                 fm.beginTransaction().replace(R.id.container, perfilFragment).commit();
                 break;

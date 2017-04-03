@@ -38,13 +38,12 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
         btnCompartir.setOnClickListener(this);
 
     }
-    // boton compartir
     @Override
-    public void onClick(View view) {
+    public void onClick(View view) { // boton compartir
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text");
+        intent.setType("text/plain");
 
-        intent.putExtra(Intent.EXTRA_TEXT, String.valueOf(descripciontips));
+        intent.putExtra(Intent.EXTRA_TEXT, descripciontips.getText());
         startActivity(intent);
     }
 }

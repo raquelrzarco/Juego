@@ -7,14 +7,14 @@
     <ImageView
         android:layout_marginLeft="10dp"
         android:id="@+id/puntosimagen"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/puntuacion"/>
-    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/objeto"/>
+    <TextView android:id="@+id/descripcion"
         android:layout_marginLeft="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/objtospuntos"
+        android:text="@string/objtos"
         android:textSize="30dp"/>
 
 

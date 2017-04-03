@@ -15,8 +15,9 @@ public class ModeloObjetos {
 
         ArrayList<ObjetosBeans> objetosBean = new ArrayList<>();
 
-        objetosBean.add(new ObjetosBeans("Objeto puntos", R.drawable.puntuacion));
-        objetosBean.add(new ObjetosBeans("Objeto vidas", R.drawable.vida));
+        objetosBean.add(new ObjetosBeans("Este objeto nos lo encontraremos aleatoriamente en el mapa y nos sumará puntuacion", R.drawable.puntuacion));
+        objetosBean.add(new ObjetosBeans("Este objeto nos sumará vida cada vez que lo obtengamos", R.drawable.vida));
+
 
         return objetosBean;
     }
