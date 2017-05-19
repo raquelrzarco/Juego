@@ -54,8 +54,8 @@ public class TipsAdapter extends ArrayAdapter<TipsBean> {
         }
         TipsBean tipsBean = objects.get(position);
         viewHolder.tips.setText(tipsBean.getPresentaciontip());
-        viewHolder.numerotip.setText(tipsBean.getTip1());
-  
+        viewHolder.numerotip.setText(tipsBean.getTip2());
+
 
         return convertView1;
     }

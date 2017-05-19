@@ -13,8 +13,7 @@ import com.raquel.juego.fragments.TipsFragment;
 public class TipsActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView presentaciontip;
     private TextView tip1;
-    private TextView tip2;
-    private TextView tip3;
+    private TextView numerotip;
     private Button btnCompartir;
 
     @Override
@@ -23,8 +22,8 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_tips);
         presentaciontip = (TextView) findViewById(R.id.presentaciontip);
         tip1 = (TextView) findViewById(R.id.tip1);
-        tip2 = (TextView) findViewById(R.id.tip2);
-        tip3 = (TextView) findViewById(R.id.tip3);
+        numerotip = (TextView) findViewById(R.id.numerotip);
+
         btnCompartir = (Button) findViewById(R.id.btnCompartir);
 
         Intent intent = getIntent();
@@ -32,8 +31,7 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
 
         presentaciontip.setText(tipsBean.getPresentaciontip());
         tip1.setText(tipsBean.getTip1());
-        tip2.setText(tipsBean.getTip2());
-        tip3.setText(tipsBean.getTip3());
+        numerotip.setText(tipsBean.getTip3());
 
         btnCompartir.setOnClickListener(this);
 

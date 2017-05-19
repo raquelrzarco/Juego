@@ -26,6 +26,10 @@ import com.raquel.juego.fragments.TipsFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    
+
+
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navView;
