@@ -34,6 +34,14 @@
         android:layout_marginTop="130dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnBaja"
+        android:layout_marginTop="480dp"
+        android:padding="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/borrar"/>
 
 
 </FrameLayout>

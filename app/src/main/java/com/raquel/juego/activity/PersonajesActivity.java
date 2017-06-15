@@ -5,12 +5,11 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.raquel.juego.Modelos.ModeloPersonajes;
+
 import com.raquel.juego.R;
 import com.raquel.juego.bean.PersonajeBean;
 import com.raquel.juego.fragments.PersonajesFragment;

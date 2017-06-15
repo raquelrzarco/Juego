@@ -26,8 +26,8 @@ import com.raquel.juego.fragments.TipsFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private String URL = "http://raquelzarco.hol.es/APIandroid/";
 
-    
 
 
     private Toolbar toolbar;

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.raquel.juego.Preferncias;
@@ -20,9 +21,10 @@ import com.raquel.juego.bean.PersonajeBean;
 import com.raquel.juego.bean.UsuarioBean;
 
 
-public class PerfilFragment extends Fragment{
+public class PerfilFragment extends Fragment implements View.OnClickListener{
     private TextView txtperfilnombre;
     private TextView txtperfilcorreo;
+    private Button btnBaja;
 
     public static PerfilFragment newInstance(){
         return new PerfilFragment();
@@ -44,6 +46,7 @@ public class PerfilFragment extends Fragment{
 
         txtperfilnombre = (TextView) view.findViewById(R.id.txtperfilnombre);
         txtperfilcorreo = (TextView) view.findViewById(R.id.txtperfilcorreo);
+        btnBaja = (Button) view.findViewById(R.id.btnBaja);
 
         UsuarioBean usuariobean = new UsuarioBean();
 
@@ -53,4 +56,8 @@ public class PerfilFragment extends Fragment{
         return view;
     }
 
+    @Override
+    public void onClick(View view) {
+        //tokken btnBaja
+    }
 }

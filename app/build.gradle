@@ -11,6 +11,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    productFlavors{
+        dev{ //Desarrollo
+            buildConfigField "int", "ENVIRONMENT", "0"
+        }
+        pro{ //Producccion
+            buildConfigField "int", "ENVIRONMENT", "1"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,6 +37,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
     compile 'com.android.support:design:25.2.0'
     testCompile 'junit:junit:4.12'
 }
