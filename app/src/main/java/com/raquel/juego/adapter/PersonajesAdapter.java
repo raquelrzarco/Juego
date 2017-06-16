@@ -44,6 +44,6 @@ public class PersonajesAdapter implements Serializable {
             viewHolder = new ViewHolder();
 
         }
-return null;
+return null; //para que no pete
     }
 }

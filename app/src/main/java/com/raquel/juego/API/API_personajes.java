@@ -23,8 +23,8 @@ public class API_personajes {
         client = new OkHttpClient();
     }
 
-    public ArrayList<PersonajeBean> getPersonaje(){
-        Request request = new Request.Builder().url(URL).build();
+    public ArrayList<PersonajeBean> getPersonajes(String token){
+        Request request = new Request.Builder().addHeader("Token", token).url(URL).build();
         Response response = null;
 
         try {

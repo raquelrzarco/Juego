@@ -1,15 +1,15 @@
 package com.raquel.juego.API;
 
-import com.raquel.juego.Response.ResponsePersonajes;
-import com.raquel.juego.Response.ResponsesPersonaje;
-import com.raquel.juego.bean.PersonajeBean;
+import com.raquel.juego.Response.ResponseUsuarios;
 import com.raquel.juego.bean.UsuarioBean;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -20,12 +20,13 @@ public class API_Usuarios {
     private String URL =  APIEnvironment.getURLUsuario();
     private OkHttpClient client;
 
-    public API_Usuarios(OkHttpClient client) {
-        this.client = client;
+    public API_Usuarios() {
+        this.client = new OkHttpClient();
     }
 
-    public ArrayList<UsuarioBean> getUsuario(){
-        Request request = new Request.Builder().url(URL).build();
+    public int setUsuarios(String nombre, String correo,String pass){
+        RequestBody body = new FormBody.Builder().add("email"+correo).add("nombre"+nombre).add("apellidos"+"").add("password"+pass).build();
+        Request request = new Request.Builder().url(URL+"new/").post(body).build();
         Response response = null;
 
         try {
@@ -36,8 +37,9 @@ public class API_Usuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+      return null;
     }
-//Peticion delete usuario
+    //Solo 1 usuario
+
 
 }
