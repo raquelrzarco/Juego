@@ -84,7 +84,8 @@ public class PersonajesFragment extends Fragment implements AdapterView.OnItemCl
         @Override
         protected ArrayList<PersonajeBean> doInBackground(String... args) {
             String token = args[0]; //Cogemos el tokken
-            return API_personajes.getPersonajes(); //lo devolvemos con el metodo getPersonajes
+            API_personajes apiPersonajes = new API_personajes();
+            return apiPersonajes.getPersonajes(preferncias.getUsuario().getToken()); //lo devolvemos con el metodo getPersonajes
         }
 
         @Override

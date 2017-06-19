@@ -27,17 +27,17 @@ public class API_personajes {
         Request request = new Request.Builder().addHeader("Token", token).url(URL).build();
         Response response = null;
 
-        try {
-            response = client.newCall(request).execute();
-            String json= response.body().string();
-            ResponsePersonajes responsePersonajes = ResponsePersonajes.fromJson(json);
-            return responsePersonajes.getPersonajes();
+    try {
+        response = client.newCall(request).execute();
+        String json= response.body().string();
+        ResponsePersonajes responsePersonajes = ResponsePersonajes.fromJson(json);
+        return responsePersonajes.getPersonajes();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+    return null;
+}
 //Peticion Get ListarPersonajes
 
     public  PersonajeBean getPersonaje(String id){

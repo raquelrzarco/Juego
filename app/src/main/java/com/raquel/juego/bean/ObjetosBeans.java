@@ -7,14 +7,24 @@ import java.io.Serializable;
  */
 
 public class ObjetosBeans implements Serializable{
+    private int id;
     private  int foto;
     private  String descripcion;
     private String nombre;
 
-    public ObjetosBeans(String descripcion, int foto, String nombre) {
+    public ObjetosBeans(String descripcion, int foto, int id, String nombre) {
         this.descripcion = descripcion;
         this.foto = foto;
+        this.id = id;
         this.nombre = nombre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {

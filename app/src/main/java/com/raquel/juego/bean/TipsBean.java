@@ -6,18 +6,26 @@ import java.io.Serializable;
  */
 
 public class TipsBean implements Serializable {
-
+    private int id;
     private String presentaciontip;
     private String tip1;
     private String tip2;
     private String tip3;
 
-
-    public TipsBean(String presentaciontip, String tip1, String tip2, String tip3) {
+    public TipsBean(int id, String presentaciontip, String tip1, String tip2, String tip3) {
+        this.id = id;
         this.presentaciontip = presentaciontip;
         this.tip1 = tip1;
         this.tip2 = tip2;
         this.tip3 = tip3;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPresentaciontip() {

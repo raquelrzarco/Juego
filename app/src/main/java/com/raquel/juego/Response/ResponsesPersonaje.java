@@ -23,6 +23,7 @@ public class ResponsesPersonaje implements Serializable {
     public int getResultado() {
         return resultado;
     }
+
     public static ResponsesPersonaje fromJson (String json){
         if(json!=null && !json.isEmpty()){
             Gson gson = new Gson();

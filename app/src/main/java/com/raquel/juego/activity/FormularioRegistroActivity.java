@@ -44,13 +44,18 @@ public class FormularioRegistroActivity extends AppCompatActivity implements Vie
 
     @Override
     public void onClick(View view) {
-            String nombre = nombreUsuario.getText().toString();
-            String correo = email.getText().toString();
-            String contraseña = password.getText().toString();
+//LLAMAR AL DIALOG
+        }
 
-            if (correo!=null && !correo.isEmpty()  && contraseña!=null && !contraseña.isEmpty() && nombre!=null && !nombre.isEmpty()) {
-                if (Utils.isEmail(correo)) {//LLama a la clase utils validando el correo
-                    //Creas un usuario en el orden del constructor
+    @Override
+    public void onPositiveClick(RegistroFragment dialogRegistroFragment) {
+        String nombre = nombreUsuario.getText().toString();
+        String correo = email.getText().toString();
+        String contraseña = password.getText().toString();
+
+        if (correo!=null && !correo.isEmpty()  && contraseña!=null && !contraseña.isEmpty() && nombre!=null && !nombre.isEmpty()) {
+            if (Utils.isEmail(correo)) {//LLama a la clase utils validando el correo
+                //Creas un usuario en el orden del constructor
 /*
                     RegistroFragment dialogRegistroFragment = new  RegistroFragment();
                     DialogFragment fragment = dialogRegistroFragment.newInstance();
@@ -58,8 +63,8 @@ public class FormularioRegistroActivity extends AppCompatActivity implements Vie
                     switch (view.getId()){
                         case R.id.confirmar:
                         */
-                            Hilo hilo = new Hilo();
-                            hilo.execute(nombre, correo, contraseña);
+                Hilo hilo = new Hilo();
+                hilo.execute(nombre, correo, contraseña);
                     /*
                             break;
 
@@ -77,42 +82,48 @@ public class FormularioRegistroActivity extends AppCompatActivity implements Vie
                         startActivity(intent);
                         finish();
                         */
-                }
-            }else {
-                Toast.makeText(this,getString(R.string.error),Toast.LENGTH_SHORT).show();
-               }
+            }
+        }else {
+            Toast.makeText(this,getString(R.string.error),Toast.LENGTH_SHORT).show();
         }
-/*
-    @Override
-    public void onPositiveClick(RegistroFragment dialogRegistroFragment) {
-
-        String nombre = nombreUsuario.getText().toString();
-        String correo = email.getText().toString();
-        String contraseña = password.getText().toString();
-
-        //Creas unas precerencias
-        Preferncias preferencias = new Preferncias(FormularioRegistroActivity.this);
-        //guardas el usuario que creamos antes en preferencias
-        UsuarioBean ususario = new UsuarioBean();
-        ususario.setNombre(nombre);
-        ususario.setContraseña(contraseña);
-        ususario.setCorreo(correo);
-
-        preferencias.setUsuario(ususario);
-        Intent intent = new Intent(FormularioRegistroActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
     }
 
     @Override
     public void onNegativeClick(RegistroFragment dialogRegistroFragment) {
-
+        dialogRegistroFragment.getDialog().cancel();
     }
-    */
-    private class Hilo extends AsyncTask<String, Void, String> {
+
+    /*
+        @Override
+        public void onPositiveClick(RegistroFragment dialogRegistroFragment) {
+
+            String nombre = nombreUsuario.getText().toString();
+            String correo = email.getText().toString();
+            String contraseña = password.getText().toString();
+
+            //Creas unas precerencias
+            Preferncias preferencias = new Preferncias(FormularioRegistroActivity.this);
+            //guardas el usuario que creamos antes en preferencias
+            UsuarioBean ususario = new UsuarioBean();
+            ususario.setNombre(nombre);
+            ususario.setContraseña(contraseña);
+            ususario.setCorreo(correo);
+
+            preferencias.setUsuario(ususario);
+            Intent intent = new Intent(FormularioRegistroActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         @Override
-        protected String doInBackground(String... args) {
+        public void onNegativeClick(RegistroFragment dialogRegistroFragment) {
+
+        }
+        */
+    private class Hilo extends AsyncTask<String, Void, Integer> {
+
+        @Override
+        protected Integer doInBackground(String... args) {
             String nombre = args[0];
             String correo = args[1];
             String pass = args[2];
@@ -123,21 +134,10 @@ public class FormularioRegistroActivity extends AppCompatActivity implements Vie
         }
 
         @Override
-        protected void onPostExecute(String s) {
+        protected void onPostExecute(Integer s) {
             super.onPostExecute(s);
-            if(s!=null){
-                String nombre = nombreUsuario.getText().toString();
-                String correo = email.getText().toString();
-                String contraseña = password.getText().toString();
+            if(s==200){
 
-                //Creas unas precerencias
-                Preferncias preferencias = new Preferncias(FormularioRegistroActivity.this);
-                //guardas el usuario que creamos antes en preferencias
-                UsuarioBean ususario = new UsuarioBean();
-                ususario.setNombre(nombre);
-                ususario.setContraseña(contraseña);
-                ususario.setCorreo(correo);
-                preferencias.setUsuario(ususario);
                 Intent intent = new Intent(FormularioRegistroActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
